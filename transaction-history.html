@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinSimplify - Transaction History</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #6a0dad;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        .transaction-history {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            box-shadow: 0 0 10px black;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #6a0dad;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #6a0dad;
+            color: #fff;
+        }
+
+        footer {
+            background: #6a0dad;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FinSimplify</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="wallet.html">Digital Wallet</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login/Sign Up</a></li>
+                <li><a href="purchase-services.html">Purchase our services</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="transaction-history">
+            <h1>Transaction History</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-07-21</td>
+                        <td>Payment to XYZ</td>
+                        <td>$100.00</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>2024-07-18</td>
+                        <td>Payment from ABC</td>
+                        <td>$50.00</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>2024-07-15</td>
+                        <td>Payment to DEF</td>
+                        <td>$200.00</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 FinSimplify. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

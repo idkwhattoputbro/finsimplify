@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinSimplify - Purchase Services</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #6a0dad;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        .services-section {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #6a0dad;
+        }
+
+
+
+        .package label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-right: 10px;
+        }
+
+        .payment-options {
+            margin-top: 20px;
+        }
+
+
+        .payment-methods div {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+
+
+        .btn-purchase {
+            width: 100%;
+            padding: 10px;
+            background: #6a0dad;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: #6a0dad;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 1rem;
+        }
+
+        a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FinSimplify</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="wallet.html">Digital Wallet</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login/Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="services-section">
+            <h1>Purchase Our Services</h1>
+            <form id="purchase-form">
+                <div class="package">
+                    <label for="package">Select a Package:</label>
+                    <div>
+                        <input type="radio" id="basic" name="package" value="Basic">
+                        <label for="basic">Basic Package - $50</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="premium" name="package" value="Premium">
+                        <label for="premium">Premium Package - $100</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="ultimate" name="package" value="Ultimate">
+                        <label for="ultimate">Ultimate Package - $200</label>
+                    </div>
+                </div>
+
+                <div class="payment-options">
+                    <label for="payment-method">Select a Payment Method:</label>
+                    <div class="payment-methods">
+                        <div>
+                            <input type="radio" id="wallet" name="payment-method" value="Digital Wallet">
+                            <label for="wallet">Digital Wallet</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="credit-card" name="payment-method" value="Credit Card">
+                            <label for="credit-card">Credit Card</label>
+                            <div id="card-element" style="display: none;">
+                                <input type="text" placeholder="Card Number" class="form-control mb-2">
+                                <input type="text" placeholder="Expiration Date" class="form-control mb-2">
+                                <input type="text" placeholder="CVV" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-purchase">Purchase</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 FinSimplify. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        const paymentMethods = document.getElementsByName('payment-method');
+        const cardElement = document.getElementById('card-element');
+
+
+        paymentMethods.forEach(method => {
+            method.addEventListener('change', () => {
+                if (method.value === 'Credit Card') {
+                    cardElement.style.display = 'block';
+                } else {
+                    cardElement.style.display = 'none';
+                }
+            });
+        });
+
+
+        document.getElementById('purchase-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Your purchase has been successful!');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
